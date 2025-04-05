@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Activity Log</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #1f1c2c, #928dab);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 26px;
+      color: #00ffe7;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    nav ul li a:hover {
+      background: rgba(0, 255, 230, 0.2);
+      box-shadow: 0 0 10px #00ffe7;
+    }
+
+    nav ul li a.active {
+      background: rgba(0, 255, 230, 0.3);
+      box-shadow: 0 0 15px #00ffe7;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 60px 0 30px;
+      font-size: 3rem;
+      color: #00ffe7;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .log-table {
+      width: 90%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 255, 230, 0.2);
+    }
+
+    .log-table th,
+    .log-table td {
+      padding: 16px;
+      text-align: left;
+    }
+
+    .log-table th {
+      background: rgba(0, 255, 230, 0.2);
+      color: #00ffe7;
+      font-size: 1.1rem;
+    }
+
+    .log-table tr {
+      transition: background 0.3s;
+    }
+
+    .log-table tr:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .log-table td {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px auto;
+    }
+
+    .nav-btn {
+      padding: 14px 28px;
+      background: #00ffe7;
+      color: #000;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00ffe7;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: #00c9aa;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      .nav-buttons {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .log-table th, .log-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Survey</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="abstract.html">Abstract</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
+      <li><a href="surveydata.html">Survey Data</a></li>
+      <li><a href="questionnaire.html">Questionnaire</a></li>
+      <li><a href="conclusion.html">Inference</a></li>
+      <li><a href="conclusion.html">Conclusion</a></li>
+      <li><a href="pictures.html">Pictures</a></li>
+      <li><a href="members.html">Members</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Title -->
+  <h1 data-aos="fade-up">Activity Log</h1>
+
+  <!-- Activity Log Table -->
+  <table class="log-table" data-aos="fade-up" data-aos-delay="200">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Activity</th>
+        <th>Team Members</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>March 15, 2025</td>
+        <td>Survey Form Designed</td>
+        <td>Aarav, Diya</td>
+      </tr>
+      <tr>
+        <td>March 18, 2025</td>
+        <td>Survey Distribution Started</td>
+        <td>Entire Team</td>
+      </tr>
+      <tr>
+        <td>March 22, 2025</td>
+        <td>Data Collection Completed</td>
+        <td>Aarav, Rohan</td>
+      </tr>
+      <tr>
+        <td>March 24, 2025</td>
+        <td>Data Analysis Started</td>
+        <td>Diya, Meera</td>
+      </tr>
+      <tr>
+        <td>March 30, 2025</td>
+        <td>Website Work Began</td>
+        <td>Rohan, Aarav</td>
+      </tr>
+      <tr>
+        <td>April 2, 2025</td>
+        <td>Charts & Inferences Created</td>
+        <td>Meera, Diya</td>
+      </tr>
+      <tr>
+        <td>April 5, 2025</td>
+        <td>Final Pages Designed</td>
+        <td>Entire Team</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons" data-aos="fade-up">
+    <a href="index.html" class="nav-btn">← Back to Home</a>
+    <a href="nextpage.html" class="nav-btn">Next →</a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+</body>
+</html>
